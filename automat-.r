@@ -29,7 +29,7 @@ ask_api_key <- function()
     {
     if (!exists("global_api_key")) 
       {
-      global_api_key <<- readline("🔑 Inserisci la tua API Key: ")
+      global_api_key <<- readline(" Inserisci la tua API Key: ")
       Sys.setenv(FMP_API_KEY = global_api_key)
     }
     return(global_api_key)
@@ -55,7 +55,7 @@ FMP_CALL <- function(endpoint)
   } 
   else 
     {
-    message("⚠️ Errore API: ", res$status_code)
+    message(" Errore API: ", res$status_code)
     return(NULL)
   }
 }
